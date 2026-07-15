@@ -6,6 +6,9 @@
 Thumbs.db
 desktop.ini
 
+# Microsoft Office temp/lock files
+~$*
+
 # Local tooling / assistant config
 .claude/
 
