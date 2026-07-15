@@ -1,0 +1,207 @@
+/* ============================================================
+   Father's Day ICE Challenge
+   Theme: "Walk into the Sunset" — warm sunset palette pulled
+   straight from the hero image (golden sun, sunset orange,
+   maroon shirt, dark silhouette browns + a Superman-cape red).
+   HTML untouched — styled entirely from this file.
+   ============================================================ */
+
+:root {
+    --sun:        #ffd27a;   /* the glowing horizon sun        */
+    --sunset:     #e8821e;   /* mid-sky orange                 */
+    --ember:      #c8531c;   /* deeper orange                  */
+    --maroon:     #7a2e23;   /* dad's shirt                    */
+    --cape:       #c0392b;   /* the little hero's cape         */
+    --night:      #2b1a14;   /* silhouette / text brown        */
+    --cream:      #fff6e6;   /* warm off-white                 */
+    --shadow:     rgba(43, 26, 20, 0.35);
+}
+
+/* ---------- Base ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--night);
+    line-height: 1.6;
+    /* Layered sunset: warm glow rising off the bottom horizon */
+    background:
+        radial-gradient(circle at 50% 92%, var(--sun) 0%, transparent 38%),
+        linear-gradient(180deg, #5a2c1a 0%, var(--ember) 35%, var(--sunset) 62%, #f6b15a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--cream);
+    box-shadow: 0 0 60px var(--shadow);
+    overflow: hidden;
+}
+
+/* ---------- Header / Nav ---------- */
+
+header {
+    /* Striped "necktie" band across the top */
+    background: var(--maroon);
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--maroon) 0px,
+        var(--maroon) 22px,
+        #6a261c 22px,
+        #6a261c 44px
+    );
+    border-bottom: 5px solid var(--sun);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 1rem;
+}
+
+nav li {
+    color: var(--cream);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+nav li:hover {
+    background: var(--sun);
+    color: var(--maroon);
+    transform: translateY(-3px);
+}
+
+/* Animated underline that grows from the center on hover */
+nav li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background: var(--cape);
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+nav li:hover::after {
+    width: 60%;
+}
+
+/* ---------- Main ---------- */
+
+main {
+    padding: 2rem clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    margin: 0.5rem 0 1.5rem;
+    color: var(--ember);
+    text-shadow: 2px 2px 0 var(--sun), 4px 4px 6px var(--shadow);
+    letter-spacing: 1px;
+}
+
+/* Hero image: framed, centered, with a soft sunset glow */
+main img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto 2.5rem;
+    border: 8px solid #fff;
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 3px var(--ember),
+        0 12px 30px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.02) rotate(-0.5deg);
+    box-shadow:
+        0 0 0 3px var(--cape),
+        0 18px 40px var(--shadow);
+}
+
+/* ---------- Section cards ---------- */
+
+section {
+    background: #fff;
+    border-left: 6px solid var(--sunset);
+    border-radius: 8px;
+    padding: 1.25rem 1.75rem;
+    margin: 0 auto 1.5rem;
+    max-width: 680px;
+    box-shadow: 0 6px 16px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    border-left-color: var(--cape);
+    box-shadow: 0 12px 26px var(--shadow);
+}
+
+h2 {
+    margin: 0 0 0.5rem;
+    color: var(--maroon);
+    font-size: 1.6rem;
+    border-bottom: 2px dashed var(--sun);
+    padding-bottom: 0.35rem;
+}
+
+/* Give each section a playful emoji marker (CSS only — no HTML edits) */
+section:nth-of-type(1) h2::before { content: "🍖 "; }
+section:nth-of-type(2) h2::before { content: "👨‍👦 "; }
+section:nth-of-type(3) h2::before { content: "⚡ "; }
+
+p {
+    margin: 0;
+    color: #4a342a;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: var(--night);
+    color: var(--sun);
+    text-align: center;
+    padding: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-top: 5px solid var(--cape);
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 480px) {
+    nav li {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 1rem 1.25rem;
+    }
+}

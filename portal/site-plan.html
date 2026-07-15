@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | Jeff's Portal</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        .swatch {
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+        .swatch .chip {
+            height: 80px;
+        }
+        .swatch .label {
+            padding: 8px 10px;
+            background: #fff;
+            font-size: 0.85rem;
+        }
+        .wireframe {
+            border: 2px dashed var(--muted);
+            padding: 0;
+            background: #fafafa;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        .wireframe div {
+            border: 1px solid var(--muted);
+            margin: 8px;
+            padding: 10px;
+            background: #fff;
+        }
+        .wf-header { background: #d6eaf8 !important; }
+        .wf-nav    { background: #d1f2eb !important; }
+        .wf-main   { background: #fdebd0 !important; min-height: 220px; }
+        .wf-footer { background: #d6eaf8 !important; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Site logo">
+        <div class="brand">
+            <h1>Site Plan</h1>
+            <p>Design document for Jeff's WDD 130 Portal</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../wwr/index.html">WWR</a></li>
+            <li><a href="ice.html">ICE</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Site Purpose</h2>
+            <p>A single portal page collecting every project I build during WDD 130, plus an About Me page. It should look like a real portfolio that I could share with an employer or client.</p>
+        </section>
+
+        <section>
+            <h2>Audience</h2>
+            <ul>
+                <li>My WDD 130 instructor (for grading)</li>
+                <li>Classmates reviewing my work</li>
+                <li>Future employers or clients reviewing a portfolio</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Scheme</h2>
+            <ul class="swatches">
+                <li class="swatch"><div class="chip" style="background:#2C3E50"></div><div class="label">Primary &mdash; #2C3E50</div></li>
+                <li class="swatch"><div class="chip" style="background:#18BC9C"></div><div class="label">Secondary &mdash; #18BC9C</div></li>
+                <li class="swatch"><div class="chip" style="background:#F39C12"></div><div class="label">Accent &mdash; #F39C12</div></li>
+                <li class="swatch"><div class="chip" style="background:#ECF0F1"></div><div class="label">Background &mdash; #ECF0F1</div></li>
+                <li class="swatch"><div class="chip" style="background:#FFFFFF;border:1px solid #ccc"></div><div class="label">Surface &mdash; #FFFFFF</div></li>
+                <li class="swatch"><div class="chip" style="background:#7F8C8D"></div><div class="label">Muted &mdash; #7F8C8D</div></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p><strong style="font-family:Montserrat,sans-serif;font-size:1.4rem">Montserrat</strong> &mdash; headings (h1&ndash;h6), navigation</p>
+            <p style="font-family:'Open Sans',sans-serif"><strong>Open Sans</strong> &mdash; body copy, forms, captions</p>
+            <p>Both are loaded from Google Fonts with system-font fallbacks.</p>
+        </section>
+
+        <section>
+            <h2>Logo</h2>
+            <p>A circular "JJ" monogram badge in the brand palette &mdash; a navy disc, teal ring, and orange accent. Saved as a 256&times;256 PNG at <code>portal/images/logo.png</code> and shown in the header on every page.</p>
+            <p><img src="images/logo.png" alt="Jeff's Portal logo" width="96" height="96"></p>
+        </section>
+
+        <section>
+            <h2>Wireframe</h2>
+            <p>Full-page layout sketch with every required element labeled.</p>
+            <img src="images/wireframe.svg" alt="Portal page wireframe" style="width:100%;max-width:1000px;border:1px solid #ccc;border-radius:6px">
+        </section>
+
+        <section>
+            <h2>Progress Checks</h2>
+            <table>
+                <caption>Four-week milestone plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Check</th>
+                        <th scope="col">Deliverable</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>100</td><td>Plan &amp; design (wireframe, colors, fonts)</td><td>Complete</td></tr>
+                    <tr><td>200</td><td>Convert to HTML</td><td>Complete</td></tr>
+                    <tr><td>300</td><td>Convert to CSS</td><td>Complete</td></tr>
+                    <tr><td>Final</td><td>About page + finishing touches</td><td>Complete</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jeff Jensen &middot; WDD 130 &middot; BYU-Idaho</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="mailto:jeff@barefootbetters.com">Email</a>
+        </p>
+    </footer>
+</body>
+</html>

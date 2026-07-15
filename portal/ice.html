@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE Challenges | Jeff's Portal</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Site logo">
+        <div class="brand">
+            <h1>Jeff's Web Portal</h1>
+            <p>BYU-Idaho WDD 130 &mdash; coursework & projects</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../wwr/index.html">WWR</a></li>
+            <li><a href="ice.html">ICE</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>ICE Challenges</h2>
+            <p>In-Class Exercises from WDD 130 &mdash; each one a small, focused build. Here's what every challenge asked for and what I took away from it.</p>
+        </section>
+
+        <section id="ice-log">
+            <h2>Challenge Log</h2>
+            <p>Click any challenge to open it in a new tab.</p>
+            <ul class="projects">
+                <li>
+                    <h3>Favorite Devotionals</h3>
+                    <p>Build a page that lists favorite devotional talks in a data table and offers a form to add a new one.</p>
+                    <p><strong>What I learned:</strong> Structuring an accessible table with <code>thead</code>/<code>tbody</code>/<code>th</code>, and wiring up a form with labels, text and number inputs, validation, and a submit button.</p>
+                    <a href="../ice/favorite_devo/favdevo.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+                <li>
+                    <h3>Father's Day Page</h3>
+                    <p>Style a pre-written HTML page for the holiday <em>without changing the markup</em> &mdash; all design driven from a single stylesheet.</p>
+                    <p><strong>What I learned:</strong> Theming with CSS alone &mdash; layered gradients, <code>::before</code> pseudo-elements to inject emoji, drop-caps, and hover transitions, all while leaving the HTML untouched.</p>
+                    <a href="../ice/fathersday/index.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+                <li>
+                    <h3>Image Gallery</h3>
+                    <p>Optimize a slow gallery of Christ-centered art by shrinking the images and generating small thumbnails.</p>
+                    <p><strong>What I learned:</strong> Why image weight matters &mdash; converting 57&nbsp;MB of PNGs into ~1&nbsp;MB JPGs, building 200&times;300 thumbnails, and pointing thumbnails at full-size images with the <code>href</code>/<code>src</code> split.</p>
+                    <a href="../ice/gallery/gallery.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+                <li>
+                    <h3>Sign Up Form</h3>
+                    <p>Style a data-collection sign-up form and study the JavaScript that previews the submitted data.</p>
+                    <p><strong>What I learned:</strong> Laying out a form with CSS Grid, styling radios/checkboxes with <code>accent-color</code>, and reading a first bit of JavaScript &mdash; <code>FormData</code>, event listeners, and <code>preventDefault()</code>.</p>
+                    <a href="../ice/signup/signup.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+                <li>
+                    <h3>Prophet Card</h3>
+                    <p>Convert a wireframe into a single styled profile card for President Dallin H. Oaks &mdash; photo, key dates, and a quote.</p>
+                    <p><strong>What I learned:</strong> Translating a wireframe straight into HTML/CSS, composing an image with a fact list, and styling a pull-quote inside a self-contained card component.</p>
+                    <a href="../ice/prophet_cards/oaks.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+                <li>
+                    <h3>Apostle Spotlight</h3>
+                    <p>Lay out the First Presidency and the Quorum of the Twelve as a gallery of captioned portraits.</p>
+                    <p><strong>What I learned:</strong> Using <code>figure</code> and <code>figcaption</code> semantically, building a responsive image grid, and visually featuring one item within the set.</p>
+                    <a href="../ice/apostle_spotlight/apostles.html" target="_blank" rel="noopener">Open challenge &rarr;</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jeff Jensen &middot; WDD 130 &middot; BYU-Idaho</p>
+        <p>
+            <a href="about.html">About</a> |
+            <a href="site-plan.html">Site Plan</a> |
+            <a href="mailto:jeff@barefootbetters.com">Email</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Archives (submission zips — regenerated as needed, not source)
+*.zip
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tooling / assistant config
+.claude/
+
+# Node (in case any project adds it later)
+node_modules/
