@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan | Jeff's Portal</title>
+    <title>Site Plan | Jeff Jensen</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -27,6 +27,22 @@
             background: #fff;
             font-size: 0.85rem;
         }
+        .wireframes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .wireframes img {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .wireframes figcaption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 6px;
+        }
     </style>
 </head>
 <body>
@@ -34,31 +50,40 @@
         <img src="images/logo.png" alt="Site logo">
         <div class="brand">
             <h1>Site Plan</h1>
-            <p>Design document for Jeff's WDD 130 Portal</p>
+            <p>Design document for Jeff Jensen's portfolio site</p>
         </div>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="wwr/index.html">WWR</a></li>
-            <li><a href="ice.html">ICE</a></li>
             <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
 
     <main>
         <section>
             <h2>Site Purpose</h2>
-            <p>A single portal page collecting every project I build during WDD 130, plus an About Me page. It should look like a real portfolio that I could share with an employer or client.</p>
+            <p>A personal portfolio that showcases my web design and development work. Its purpose is to present my projects, skills, and background in a clean, professional way so that a potential employer, client, or collaborator can quickly understand what I can build &mdash; and to serve as a living record of my growth as a front-end developer.</p>
         </section>
 
         <section>
             <h2>Audience</h2>
             <ul>
-                <li>My WDD 130 instructor (for grading)</li>
-                <li>Classmates reviewing my work</li>
-                <li>Future employers or clients reviewing a portfolio</li>
+                <li>Potential employers and clients evaluating a front-end developer</li>
+                <li>Instructors and classmates reviewing my work</li>
+                <li>Anyone learning web development who wants real, hosted examples</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Site Structure</h2>
+            <p>A home page plus two child pages. Every page shares the same header, navigation, and footer, and links to both child pages.</p>
+            <ul>
+                <li><strong>Home</strong> (<code>index.html</code>) &mdash; introduction and featured work</li>
+                <li><strong>About Me</strong> (<code>about.html</code>) &mdash; background, skills, and goals</li>
+                <li><strong>Projects</strong> (<code>projects.html</code>) &mdash; detailed portfolio of builds</li>
             </ul>
         </section>
 
@@ -83,42 +108,36 @@
 
         <section>
             <h2>Logo</h2>
-            <p>A circular "JJ" monogram badge in the brand palette &mdash; a navy disc, teal ring, and orange accent. Saved as a PNG at <code>images/logo.png</code> and shown in the header on every page.</p>
-            <p><img src="images/logo.png" alt="Jeff's Portal logo" width="96" height="96"></p>
+            <p>A circular "JJ" monogram badge in the brand palette &mdash; a dark-slate disc, teal ring, and orange accent. Saved as a PNG at <code>images/logo.png</code> and shown in the header on every page.</p>
+            <p><img src="images/logo.png" alt="Jeff Jensen logo" width="96" height="96"></p>
         </section>
 
         <section>
-            <h2>Wireframe</h2>
-            <p>Full-page layout sketch with every required element labeled.</p>
-            <img src="images/wireframe.svg" alt="Portal page wireframe" style="width:100%;max-width:1000px;border:1px solid #ccc;border-radius:6px">
+            <h2>Wireframes</h2>
+            <p>Layout sketches for the home page and the shared child-page template, with every required element labeled.</p>
+            <div class="wireframes">
+                <figure>
+                    <img src="images/wireframe-home.png" alt="Home page wireframe">
+                    <figcaption>Home page</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/wireframe-child.png" alt="Child page wireframe">
+                    <figcaption>Child page (About Me / Projects)</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section>
-            <h2>Progress Checks</h2>
-            <table>
-                <caption>Four-week milestone plan</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Check</th>
-                        <th scope="col">Deliverable</th>
-                        <th scope="col">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>100</td><td>Plan &amp; design (wireframe, colors, fonts)</td><td>Complete</td></tr>
-                    <tr><td>200</td><td>Convert to HTML</td><td>Complete</td></tr>
-                    <tr><td>300</td><td>Convert to CSS</td><td>Complete</td></tr>
-                    <tr><td>Final</td><td>About page + finishing touches</td><td>Complete</td></tr>
-                </tbody>
-            </table>
+            <h2>Full Site Plan</h2>
+            <p>The complete site plan &mdash; including all page content and media &mdash; is available as a Word document: <a href="jensen-site-plan.docx">jensen-site-plan.docx</a>.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jeff Jensen &middot; WDD 130 &middot; BYU-Idaho</p>
+        <p>&copy; 2026 Jeff Jensen &middot; Front-End Web Developer</p>
         <p>
             <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
+            <a href="about.html">About Me</a> |
             <a href="mailto:jeff@barefootbetters.com">Email</a>
         </p>
     </footer>

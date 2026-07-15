@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="480" viewBox="0 0 1400 480" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2C3E50"/>
+      <stop offset="1" stop-color="#1a2733"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18BC9C"/>
+      <stop offset="1" stop-color="#12a589"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="480" fill="url(#bg)"/>
+
+  <!-- Decorative accent circles -->
+  <circle cx="120" cy="90" r="140" fill="#18BC9C" opacity="0.08"/>
+  <circle cx="1320" cy="430" r="180" fill="#F39C12" opacity="0.07"/>
+  <circle cx="1180" cy="60" r="70" fill="#18BC9C" opacity="0.10"/>
+
+  <!-- Code editor window (right side) -->
+  <g transform="translate(820,90)">
+    <rect x="0" y="0" width="500" height="300" rx="12" fill="#34495e" stroke="#3f5872" stroke-width="1.5"/>
+    <!-- title bar -->
+    <rect x="0" y="0" width="500" height="38" rx="12" fill="#2c3e50"/>
+    <rect x="0" y="20" width="500" height="18" fill="#2c3e50"/>
+    <circle cx="24" cy="19" r="6" fill="#F39C12"/>
+    <circle cx="46" cy="19" r="6" fill="#18BC9C"/>
+    <circle cx="68" cy="19" r="6" fill="#7f8c8d"/>
+    <text x="250" y="24" font-size="13" fill="#8fa2b5" text-anchor="middle">index.html</text>
+
+    <!-- code lines -->
+    <g>
+      <rect x="30" y="66"  width="60"  height="10" rx="3" fill="#18BC9C"/>
+      <rect x="100" y="66" width="150" height="10" rx="3" fill="#8fa2b5"/>
+      <rect x="30" y="92"  width="40"  height="10" rx="3" fill="#F39C12"/>
+      <rect x="80" y="92"  width="200" height="10" rx="3" fill="#8fa2b5"/>
+      <rect x="60" y="118" width="120" height="10" rx="3" fill="#eef2f5"/>
+      <rect x="190" y="118" width="90" height="10" rx="3" fill="#18BC9C"/>
+      <rect x="60" y="144" width="220" height="10" rx="3" fill="#8fa2b5"/>
+      <rect x="30" y="170" width="70"  height="10" rx="3" fill="#F39C12"/>
+      <rect x="110" y="170" width="160" height="10" rx="3" fill="#eef2f5"/>
+      <rect x="60" y="196" width="180" height="10" rx="3" fill="#8fa2b5"/>
+      <rect x="60" y="222" width="100" height="10" rx="3" fill="#18BC9C"/>
+      <rect x="30" y="248" width="50"  height="10" rx="3" fill="#8fa2b5"/>
+    </g>
+  </g>
+
+  <!-- Left decorative code brackets -->
+  <g transform="translate(150,190)" fill="none" stroke="#18BC9C" stroke-width="10" stroke-linecap="round" opacity="0.55">
+    <path d="M60 0 L10 50 L60 100"/>
+    <path d="M150 0 L200 50 L150 100"/>
+  </g>
+  <rect x="250" y="235" width="50" height="10" rx="5" fill="#F39C12" opacity="0.6"/>
+</svg>

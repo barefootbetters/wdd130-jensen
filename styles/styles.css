@@ -119,10 +119,12 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.90), rgba(26, 39, 51, 0.82)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--surface);
     text-align: center;
-    padding: 60px 30px;
+    padding: 70px 30px;
 }
 
 .hero h2 {
