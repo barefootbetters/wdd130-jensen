@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff's Portal | WDD 130</title>
+    <title>Jeff Jensen | Front-End Web Developer</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,82 +11,74 @@
     <header>
         <img src="images/logo.png" alt="Site logo">
         <div class="brand">
-            <h1>Jeff's Web Portal</h1>
-            <p>BYU-Idaho WDD 130 &mdash; coursework & projects</p>
+            <h1>Jeff Jensen</h1>
+            <p>Front-End Web Developer</p>
         </div>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="wwr/index.html">WWR</a></li>
-            <li><a href="ice.html">ICE</a></li>
             <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
 
     <main>
         <section class="hero">
-            <h2>Welcome to My Portfolio</h2>
-            <p>A growing collection of web design and development projects from my WDD 130 journey at BYU-Idaho.</p>
+            <h2>Clean, Usable Websites &mdash; Built by Hand</h2>
+            <p>I'm Jeff Jensen, a front-end web developer studying at BYU-Idaho. I design and code responsive, accessible websites from the ground up &mdash; semantic HTML, modern CSS, and a focus on making things easy to read and easy to use.</p>
+            <a class="cta" href="projects.html">View My Projects &rarr;</a>
         </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
-            <p>Click any project to view it.</p>
+            <p>A few recent builds &mdash; each one started as a wireframe and became a live, hosted site.</p>
             <ul class="projects">
                 <li>
+                    <img src="wwr/images/hero.png" alt="Whitewater rafting site homepage">
                     <h3>Whitewater Rafting</h3>
-                    <p>A full multi-page site for an outdoor adventure company built in Week 4.</p>
+                    <p>A multi-page site for an outdoor adventure company, built with CSS Grid and a mobile-first layout.</p>
                     <a href="wwr/index.html">View site &rarr;</a>
                 </li>
                 <li>
-                    <h3>Image Gallery</h3>
-                    <p>An optimized thumbnail gallery of Christ-centered art that loads fast and links to full-size images.</p>
+                    <img src="ice/gallery/images/small/img1.jpg" alt="Optimized art gallery thumbnail">
+                    <h3>Optimized Image Gallery</h3>
+                    <p>A fast-loading art gallery that cut page weight from 57&nbsp;MB to under 100&nbsp;KB with image optimization and thumbnails.</p>
                     <a href="ice/gallery/gallery.html">View gallery &rarr;</a>
                 </li>
                 <li>
-                    <h3>Sign Up Form</h3>
-                    <p>A styled sign-up form with grid layout, validation, and a JavaScript submit preview.</p>
-                    <a href="ice/signup/signup.html">View form &rarr;</a>
+                    <img src="portal/screenshot-portal.jpg" alt="Screenshot of coursework projects">
+                    <h3>ICE Challenges</h3>
+                    <p>A set of small in-class builds &mdash; tables, forms, and holiday theming &mdash; each showing a focused skill.</p>
+                    <a href="ice.html">View challenges &rarr;</a>
                 </li>
             </ul>
         </section>
 
         <section id="skills">
-            <h2>Skills Snapshot</h2>
-            <table>
-                <caption>Progress through WDD 130 topics</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Topic</th>
-                        <th scope="col">Comfort Level</th>
-                        <th scope="col">Last Practiced</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HTML structure & semantics</td>
-                        <td>Comfortable</td>
-                        <td>Week 4</td>
-                    </tr>
-                    <tr>
-                        <td>CSS layout (Flex & Grid)</td>
-                        <td>Comfortable</td>
-                        <td>Week 7</td>
-                    </tr>
-                    <tr>
-                        <td>Responsive design</td>
-                        <td>Learning</td>
-                        <td>Week 7</td>
-                    </tr>
-                    <tr>
-                        <td>Forms & accessibility</td>
-                        <td>Learning</td>
-                        <td>Week 6</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Skills &amp; Highlights</h2>
+            <div class="skills-grid">
+                <img src="images/profile.png" alt="Photo of Jeff Jensen">
+                <div>
+                    <p>I work comfortably with semantic HTML5, CSS layout (Flexbox and Grid), responsive design, Git and GitHub, and hosting with GitHub Pages. I'm currently expanding into JavaScript and dynamic web apps.</p>
+                    <table>
+                        <caption>Progress through WDD 130 topics</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Topic</th>
+                                <th scope="col">Comfort Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>HTML structure &amp; semantics</td><td>Comfortable</td></tr>
+                            <tr><td>CSS layout (Flex &amp; Grid)</td><td>Comfortable</td></tr>
+                            <tr><td>Responsive design</td><td>Learning</td></tr>
+                            <tr><td>JavaScript</td><td>In progress</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -119,10 +111,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Jeff Jensen &middot; WDD 130 &middot; BYU-Idaho</p>
+        <p>&copy; 2026 Jeff Jensen &middot; Front-End Web Developer</p>
         <p>
-            <a href="about.html">About</a> |
-            <a href="site-plan.html">Site Plan</a> |
+            <a href="about.html">About Me</a> |
+            <a href="projects.html">Projects</a> |
             <a href="mailto:jeff@barefootbetters.com">Email</a>
         </p>
     </footer>
