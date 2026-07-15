@@ -1,0 +1,91 @@
+/* ============================================================
+   Student Five — Personal Site (shared team stylesheet)
+   My junior-dev page (About) uses this same sheet as the team's
+   home and contact pages, coordinated with the lead developer.
+   Palette: navy / gold on light gray.
+   ============================================================ */
+
+:root {
+    --primary: #1b3a5b;   /* navy */
+    --accent:  #d4a017;   /* gold */
+    --bg:      #eef1f4;
+    --surface: #ffffff;
+    --text:    #26313d;
+    --muted:   #6d7885;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { color: var(--primary); margin: 0 0 0.4em 0; }
+
+a { color: var(--accent); font-weight: 600; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--primary);
+    color: var(--surface);
+    padding: 18px 36px;
+}
+
+header img { width: 60px; height: 60px; border-radius: 50%; background: var(--surface); }
+header h1 { color: var(--surface); margin: 0; font-size: 1.6rem; }
+header .brand p { margin: 0; color: var(--accent); font-size: 0.9rem; }
+
+/* Nav */
+nav { background: var(--primary); border-top: 1px solid rgba(255,255,255,0.15); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+nav a { display: block; color: var(--surface); padding: 13px 22px; font-weight: 600; }
+nav a:hover { background: var(--accent); color: var(--primary); text-decoration: none; }
+
+/* Main */
+main {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    background: var(--surface);
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(27, 58, 91, 0.12);
+}
+
+section img {
+    width: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    margin-bottom: 14px;
+}
+
+section ul { padding-left: 20px; }
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    header { flex-direction: column; text-align: center; }
+    section img { margin-left: auto; margin-right: auto; }
+}

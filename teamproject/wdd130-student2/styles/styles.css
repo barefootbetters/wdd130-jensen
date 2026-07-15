@@ -1,0 +1,218 @@
+/* ============================================================
+   Student Two — Personal Site
+   Shared stylesheet for all three pages (home, about, contact).
+   Palette: indigo / terracotta / sage on cream.
+   ============================================================ */
+
+:root {
+    --primary: #3d405b;   /* dark indigo */
+    --accent:  #e07a5f;   /* terracotta */
+    --sage:    #81b29a;   /* sage green */
+    --bg:      #f4f1de;   /* cream */
+    --surface: #ffffff;
+    --text:    #3d405b;
+    --muted:   #6b6d7c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    color: var(--primary);
+    margin: 0 0 0.4em 0;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--primary);
+    color: var(--surface);
+    padding: 20px 40px;
+}
+
+header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--surface);
+    padding: 4px;
+}
+
+header h1 {
+    color: var(--surface);
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+header .brand p {
+    margin: 0;
+    color: var(--sage);
+    font-size: 0.95rem;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background: var(--primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: var(--surface);
+    padding: 14px 24px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background: var(--accent);
+    text-decoration: none;
+}
+
+/* ===== Main layout (Grid) ===== */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 28px;
+}
+
+section {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(61, 64, 91, 0.12);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--sage));
+    color: var(--surface);
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.hero h2 {
+    color: var(--surface);
+    font-size: 2.3rem;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* About preview — two-column grid on wider screens */
+#about-preview {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+#about-preview img {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--sage);
+}
+
+#about-preview h2 {
+    grid-column: 1 / -1;
+}
+
+/* Highlights list */
+#highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+#highlights li {
+    background: var(--bg);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 6px;
+}
+
+/* Contact preview */
+#contact-preview {
+    text-align: center;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: 20px;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social a {
+    color: var(--sage);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about-preview {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #about-preview img {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+}
